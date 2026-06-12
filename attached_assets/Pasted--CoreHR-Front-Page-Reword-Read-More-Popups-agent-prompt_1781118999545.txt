@@ -1,0 +1,170 @@
+# CoreHR — Front Page Reword + Read More Popups (agent prompt)
+
+ROLE
+Reword the CoreHR front page for sharper, honest, benefit-led copy, and implement a "Read More"
+popup on each feature card with the content provided in PART C. Two non-negotiables: (1) remove
+fabricated metrics, (2) reframe the people-analytics features as team-level, privacy-respecting
+decision support — including in the pricing tiers. Copy + a modal component only; do not change
+unrelated functionality. Show before/after and file:line evidence. Keep English AND Arabic (RTL)
+consistent.
+
+---
+
+## PART A — HONEST FIXES (required, do first)
+
+A1. REMOVE fabricated metrics. The "Trusted by modern teams building the future of work" band with
+"10,000+ Employees Managed", "95% HR Tasks Automated", "3× Faster Hiring" is unverified and must
+not ship. Replace the three stat tiles with honest capability statements (no numbers), e.g.:
+  - "Unified — the whole employee lifecycle on one platform"
+  - "AI-native — copilots and insights built in, not bolted on"
+  - "Region-ready — Arabic, RTL, and multi-currency (OMR / AED / SAR)"
+Replace the "Trusted by…" heading with a capability/vision line (e.g. "Built for modern HR teams")
+UNLESS there are real, named customers to cite. Demo data inside the hero (Workforce 2,847; the
+AI Copilot example) may stay but label/treat it as an illustrative product preview, not a real stat.
+
+A2. REFRAME the people-analytics features (team-level, privacy-respecting; rename where shown):
+  - "AI Intelligence Layer" tagline → "Surface team-level retention and sentiment signals, and
+    deploy AI copilots across HR." (was "Predict attrition, analyze sentiment")
+  - "Sentiment & Emotion AI" → rename to "Sentiment Insights"; tagline → "Understand how teams are
+    doing — aggregate and privacy-respecting."
+  - "Resignation Risk — Identify at-risk employees before they leave" → rename to
+    "Retention Insights"; tagline → "Spot where retention needs attention, early — to support, not surveil."
+  - "Digital Twins — Simulate employee behavior and skill growth" → tagline →
+    "Model skills growth and workforce scenarios for planning."
+  - PRICING (Enterprise tier) — update the same: "Sentiment & Emotion AI" → "Sentiment Insights";
+    "Resignation risk prediction" → "Retention insights"; "Digital twins" → "Digital twins (skills & scenarios)".
+  - If any screen actually DISPLAYS a per-employee quit-probability or named flight-risk score (not
+    just copy), STOP and flag it — that's a design decision, not a wording fix; don't relabel it.
+
+A3. SOFTEN compliance claims (don't claim certification you don't hold):
+  - "GDPR & SOX — …full compliance reporting" → "GDPR & SOX Support — Audit logs, data portability,
+    and compliance reporting to support your obligations."
+  - Elite tier "Advanced compliance (GDPR, SOX)" → "Advanced compliance tooling (GDPR, SOX)".
+
+A4. POLISH the rest: tighten headlines and section copy, sentence case, active voice, consistent
+voice; keep claims accurate (capabilities, not unverified outcomes). Don't invent new metrics.
+
+---
+
+## PART B — READ MORE POPUPS
+
+B1. Add a "Read More" link to every feature card listed in PART C. Clicking opens an accessible
+modal/popup containing that card's title + the expanded content from PART C.
+B2. Modal requirements: focus-trapped, closes on ESC and on outside-click, restores focus on close,
+background scroll-locked, `aria` labelled. Open/close animated with transform/opacity only;
+collapses to instant under prefers-reduced-motion. Renders correctly in RTL (Arabic).
+B3. Use the reframed titles from PART A (Sentiment Insights, Retention Insights, GDPR & SOX Support).
+
+---
+
+## PART C — POPUP CONTENT (per card)
+
+**Core HR Operations**
+One source of truth for your entire workforce — employee records, departments, reporting lines, and
+self-service in one connected system, so HR stops chasing spreadsheets and people find what they need.
+• Centralized records and documents, with role-based access. • Org charts that update automatically.
+• Clear department and reporting structures. • Employee self-service for profiles, leave, documents.
+• Built for the region: Arabic/RTL self-service and locale-aware fields.
+
+**Recruitment & Hiring**
+Run your whole pipeline in one place, from job post to offer. AI helps surface the strongest
+candidates faster — as a signal to guide you, never a replacement for your judgment.
+• Applicant tracking from applied to hired. • AI candidate scoring you review, not an auto-verdict.
+• Interview scheduling that cuts back-and-forth. • Shared scorecards to keep hiring teams aligned.
+
+**Onboarding**
+Turn a new hire's first weeks into a structured, welcoming experience — automated workflows handle
+the paperwork and task lists while buddy assignments make people feel connected from day one.
+• Workflows that trigger the right tasks, documents, approvals. • Buddy/mentor assignments.
+• Shared checklists across new hire, manager, HR. • Digital document collection and e-signature.
+
+**AI Intelligence Layer**
+HR insight working quietly in the background — surfacing team-level retention and sentiment signals
+and giving your team AI copilots. Decision support that informs human action, not automated
+judgments about people.
+• Team-level retention signals so you can act early with support. • Aggregate sentiment from surveys
+and feedback. • AI copilots that answer policy questions and draft HR comms. • Privacy respected by design.
+
+**HR Chatbot**
+An always-on first point of contact. Answers common questions instantly, any time, in their language,
+so your team isn't buried in repetitive tickets.
+• Instant answers on policies, leave, benefits, procedures, 24/7. • Bilingual (English/Arabic).
+• Hands off to a human when needed. • Frees HR for higher-value work.
+
+**Sentiment Insights**
+Understand how your workforce is doing at the team level, from surveys and feedback. Built to surface
+aggregate trends that guide supportive action — not to monitor or score individuals.
+• Aggregate sentiment trends across teams and over time. • Early signals of where morale needs attention.
+• Anonymized and team-level by design. • Informs human action, never automated judgments about people.
+
+**Retention Insights**
+Spot where retention needs attention before it becomes turnover. Highlights team-level patterns that
+often precede attrition, so you can act early with support — not surveillance.
+• Team and segment-level signals showing where retention focus is needed. • Surfaces patterns early so
+managers can check in. • Guidance for supportive action, privacy respected. • A prompt to help retain
+people — not a verdict about any individual.
+
+**Digital Twins**
+Model your workforce's skills and growth to plan ahead. Explore how skills develop and how teams might
+evolve under different scenarios — for planning, not monitoring.
+• Scenario modeling of skill growth and capability gaps. • "What-if" planning for reorganizations or
+growth. • Career-path and development modeling. • Aggregate and planning-focused, not individual tracking.
+
+**Workforce Planning**
+Plan headcount with foresight instead of guesswork. Forecast hiring needs, model org changes, and see
+the cost implications before you commit.
+• Headcount and hiring-need forecasting. • Cost modeling for staffing decisions. • Scenario planning for
+growth or restructuring. • Region-aware multi-currency (OMR / AED / SAR).
+
+**Dashboard**
+Your HR command center. Real-time KPIs, activity feeds, and insights in one view.
+• Live KPIs across headcount, hiring, leave, and more. • Activity feeds on what's changing.
+• Drill-down from big picture to detail. • Role-aware views per user.
+
+**Org Chart**
+See your whole organization at a glance — an interactive, always-current org chart.
+• Interactive reporting hierarchy to explore. • Updates automatically as people move. • Clear view of
+teams and reporting lines. • Useful for planning reorganizations.
+
+**Learning + VR Training**
+Develop your people with training that sticks — from standard courses to immersive VR scenarios.
+• Course delivery and tracking. • Immersive VR for hands-on or high-stakes scenarios. • Progress tracking
+tied to roles and plans. • Engaging formats that improve retention of learning.
+
+**Payroll & Attendance**
+Run payroll and track time without the manual grind — automated payroll, scheduling, and attendance in
+one flow.
+• Automated payroll with multi-currency (OMR / AED / SAR). • Shift scheduling and management.
+• Attendance and time tracking that feeds payroll. • Less manual reconciliation, fewer errors.
+
+**GDPR & SOX Support**
+The tools to support your GDPR and SOX obligations — audit logs, data portability, and reporting that
+make compliance work manageable. (These support your compliance program; certification remains your
+organization's responsibility.)
+• Comprehensive audit logs. • Data export/portability for data-subject requests. • Compliance reporting
+to evidence controls. • Data-handling controls aligned to GDPR principles.
+
+**Role-Based Access**
+Make sure people see only what they should — granular, role-based permissions across every module and entity.
+• Permissions down to module/entity level. • Access matched to responsibilities. • Protects compensation,
+performance, personal records. • Central control over view/edit/approve.
+
+**2FA Authentication**
+A strong second layer of protection — TOTP-based two-factor authentication for admin accounts.
+• TOTP-based 2FA with standard authenticator apps. • Required for admin accounts. • Cuts risk from
+stolen or reused passwords.
+
+**Secure Infrastructure**
+Security built into the foundation — encrypted at rest and in transit, with protections against common
+web threats.
+• Encryption at rest and in transit. • CSP, CSRF protection, rate limiting. • Controls applied across the platform.
+
+---
+
+## CONSTRAINTS & DEFINITION OF DONE
+- No fabricated metrics anywhere; AI features reframed (page AND pricing); compliance softened to "support".
+- Read More popup on every PART C card; accessible (focus trap, ESC, outside-click, scroll lock, aria) and
+  RTL-correct; motion respects prefers-reduced-motion.
+- English and Arabic copy consistent. No unrelated functionality changed.
+- Report: before/after for every copy change (file:line), the modal component, and any per-employee
+  risk/score screen flagged under A2 for a decision.

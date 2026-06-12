@@ -1,0 +1,41 @@
+ROLE
+Sweep the CoreHR codebase and all copy for any place that frames the AI Intelligence Layer
+(attrition + sentiment features) as individual surveillance or "predicts who will quit," and
+reframe it to TEAM-LEVEL, privacy-respecting decision support. Evidence-backed: show file:line and
+before/after for every change. Copy/framing only — do not change feature logic (but see Task 3).
+
+WHAT TO CHANGE FROM / TO
+- FROM: "predicts who will quit", per-employee "flight risk", "X% likely to leave", monitoring/
+  surveillance language, anything that targets or judges named individuals.
+- TO: team/segment-level signals that highlight where retention attention is needed; framing that
+  guides supportive human action ("check in", "support retention"), not automated verdicts about
+  people; sentiment as understanding how teams are doing, not monitoring individuals; and an explicit
+  note that insights respect employee privacy and inform decisions rather than make them.
+
+TASKS
+1. INVENTORY every occurrence, with file:line, across ALL surfaces:
+   - Marketing/landing copy and the feature "read more" content.
+   - In-app UI strings: labels, headings, tooltips, descriptions, empty/error states, i18n files
+     (en AND ar — check both languages).
+   - Feature/module/menu names (e.g. anything named "Flight Risk", "Quit Predictor", "Attrition
+     Predictor", "Employee Monitoring").
+   - Help text, docs, onboarding copy, DB seed text, email/notification templates.
+   List the offending text for each.
+2. REFRAME each occurrence to the team-level, privacy-respecting language above. Keep voice
+   consistent; don't overclaim accuracy ("signals"/"highlights", not "predicts"/"knows").
+3. HONESTY CHECK — do NOT just relabel a real surveillance feature. If any surface actually
+   COMPUTES or DISPLAYS individual-level outputs (a per-employee quit probability, a named "flight
+   risk" score, individual monitoring), STOP and FLAG it for me with file:line — that's a design/
+   ethics decision, not a wording fix. Relabeling it without changing what it shows would be
+   dishonest. List these separately.
+
+CONSTRAINTS
+- Framing/copy only unless flagged under Task 3. Do not break functionality or i18n keys.
+- Both languages (en/ar) must end up consistent.
+- Show before/after for every change.
+
+DEFINITION OF DONE
+- A list of every changed string (file:line, before → after) across all surfaces and both languages.
+- A separate list of any INDIVIDUAL-LEVEL features flagged under Task 3 for a decision (relabel
+  isn't enough).
+- No functionality or i18n keys broken.
